@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Http</title>
+    <link rel="stylesheet" href="styles/app.css" />
+    <script src="scripts/app.js" defer></script>
+</head>
+
+<body>
+    <template id="single-post">
+      <li class="post-item">
+        <h2></h2>
+        <h3></h3>       
+        <p></p>  
+        <h4></h4>       
+      </li>
+    </template>
+    <section id="new-post">
+        <form>
+            <div class="form-control">
+                <input type="text" id="title" />
+            </div>
+            <button type="submit">Submit</button>
+        </form>
+    </section>
+    <section id="available-posts">
+        <!-- <button>Results of all job posts</button> -->
+        <ul class="posts"></ul>
+    </section>
+</body>
+
+</html>
