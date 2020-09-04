@@ -5,7 +5,7 @@ module.exports = {
     mode: 'production',
     entry: './src/app.js',
     output: {
-        filename: '[contenthash].js',
+        filename: 'app.min.js',
         path: path.resolve(__dirname, 'assets', 'scripts/dist/'),
         publicPath: 'assets/scripts/dist/',
     },
