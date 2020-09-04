@@ -3,6 +3,7 @@ const postTemplate = document.getElementById('single-post');
 const form = document.querySelector('#new-post form');
 const searchCountElement = document.querySelector('#search-count');
 
+// class which extents from Error 
 class ValidationError extends Error {
     constructor(message) {
         super(message);
@@ -10,6 +11,7 @@ class ValidationError extends Error {
     }
 }
 
+// function to send http request
 function sendHttpRequest(method, url) {
     const promise = new Promise((resolve, reject) => {
         const xhr = new XMLHttpRequest();
@@ -36,6 +38,7 @@ function sendHttpRequest(method, url) {
     return promise;
 }
 
+// function which update DOM after getting the http response
 async function fetchPosts(url) {
     try {
         const responseData = await sendHttpRequest('GET', url);
@@ -77,6 +80,7 @@ async function fetchPosts(url) {
 }
 
 
+// function to clear job search list
 function clearJobSearchList() {
     var ul = document.querySelector('.posts');
     var listLength = ul.children.length;
@@ -86,13 +90,14 @@ function clearJobSearchList() {
     }
 }
 
+
+// event listener for submit button 
 form.addEventListener('submit', event => {
     event.preventDefault();
     clearJobSearchList();
     const value = event.currentTarget.querySelector('#title').value;
     const url = 'https://api.joblocal.de/v4/search-jobs';
     const finalURL = url + "?search.query=" + value + "";
-    /*    const data = "?search.query=" + value + ""; */
 
     fetchPosts(finalURL);
 })
