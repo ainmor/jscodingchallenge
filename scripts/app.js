@@ -31,7 +31,7 @@ function sendHttpRequest(method, url) {
 
 async function fetchPosts(url) {
     try {
-        const responseData = await sendHttpRequest('GET', url /* , data */ );
+        const responseData = await sendHttpRequest('GET', url);
 
         const listOfSearchPosts = responseData;
 
