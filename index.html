@@ -5,7 +5,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>Http</title>
+    <title>Search Job</title>
     <link rel="stylesheet" href="styles/app.css" />
     <script src="scripts/app.js" defer></script>
 </head>
@@ -19,18 +19,23 @@
         <h4></h4>       
       </li>
     </template>
+    <header id="main-header">
+        <h1>Job Search Engine</h1>
+    </header>
     <section id="new-post">
         <form>
             <div class="form-control">
-                <input type="text" id="title" />
+                <input type="search" id="title" />
             </div>
             <button type="submit">Submit</button>
         </form>
     </section>
     <section id="available-posts">
         <!-- <button>Results of all job posts</button> -->
+        <p id="search-count"></p>
         <ul class="posts"></ul>
     </section>
+
 </body>
 
 </html>
