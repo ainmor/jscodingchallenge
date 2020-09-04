@@ -1,5 +1,5 @@
 const path = require('path');
-const cleanPlugin = require('clean-webpack-plugin');
+// const cleanPlugin = require('clean-webpack-plugin');
 
 module.exports = {
     mode: 'development',
@@ -13,5 +13,5 @@ module.exports = {
         contentBase: './',
     },
     devtool: 'cheap-module-eval-source-map',
-    plugins: [new cleanPlugin.CleanWebpackPlugin()],
+    // plugins: [new cleanPlugin.CleanWebpackPlugin()],
 };
